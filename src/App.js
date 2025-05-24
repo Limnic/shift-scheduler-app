@@ -40,7 +40,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const appId = typeof __app_id !== 'undefined' ? __app_id : 'shift-app-react-v2'; 
+const appId = firebaseConfig.projectId; 
 
 // --- Contexts ---
 const AuthContext = createContext(null);
